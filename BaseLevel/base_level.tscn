@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://byx14churmi3v"]
+
+[ext_resource type="PackedScene" uid="uid://d0vmtaivqwf2e" path="res://Paratrooper/paratrooper.tscn" id="1_bo3yr"]
+[ext_resource type="Texture2D" uid="uid://b0hat4t8aknyc" path="res://sky.png" id="1_eesb3"]
+[ext_resource type="Texture2D" uid="uid://daouatbddn52m" path="res://Grey.png" id="2_eesb3"]
+[ext_resource type="PackedScene" uid="uid://hpi3iuubi8tp" path="res://FighterJet/fighter_jet.tscn" id="4_3o4py"]
+
+[node name="BaseLevel" type="Node2D" unique_id=2091444319]
+
+[node name="Background" type="Parallax2D" parent="." unique_id=1338987035]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1492019902]
+position = Vector2(510, 510)
+texture = ExtResource("1_eesb3")
+
+[node name="Plane" type="Sprite2D" parent="." unique_id=92656114]
+position = Vector2(528, 252)
+scale = Vector2(2.4941406, 0.61328125)
+texture = ExtResource("2_eesb3")
+
+[node name="Paratrooper" parent="." unique_id=1752100711 instance=ExtResource("1_bo3yr")]
+position = Vector2(529, 254)
+
+[node name="FighterJet" parent="." unique_id=301996600 instance=ExtResource("4_3o4py")]
+position = Vector2(485, 469)

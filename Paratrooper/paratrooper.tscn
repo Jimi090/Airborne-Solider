@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d0vmtaivqwf2e"]
+
+[ext_resource type="Script" uid="uid://d2vcwlr2t64tm" path="res://Paratrooper/paratrooper.gd" id="1_es736"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_478fi"]
+radius = 24.0
+
+[sub_resource type="Gradient" id="Gradient_h8tyy"]
+offsets = PackedFloat32Array(0, 0.9698795, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.8493976, 0.8493976, 0.8493976, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_478fi"]
+gradient = SubResource("Gradient_h8tyy")
+fill_from = Vector2(1, 0)
+
+[node name="Paratrooper" type="RigidBody2D" unique_id=1752100711]
+script = ExtResource("1_es736")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1077177855]
+shape = SubResource("CircleShape2D_478fi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1471596276]
+texture = SubResource("GradientTexture2D_478fi")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2071650796]

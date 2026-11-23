@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://hpi3iuubi8tp"]
+
+[ext_resource type="Script" uid="uid://clwdbyy1rps84" path="res://FighterJet/fighter_jet.gd" id="1_vs0yo"]
+[ext_resource type="Texture2D" uid="uid://bamp8hg23qv7f" path="res://FighterJet/Green.png" id="2_vs0yo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4n46"]
+size = Vector2(256, 257)
+
+[node name="FighterJet" type="CharacterBody2D" unique_id=301996600]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_vs0yo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=817505691]
+position = Vector2(0, -2.5)
+texture = ExtResource("2_vs0yo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1118223448]
+position = Vector2(1, -3)
+shape = SubResource("RectangleShape2D_j4n46")
